@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Personaje } from '../interfaces/dbz.interface';
+import { DbzServices } from '../services/dbz.services';
+
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html'
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  nuevo: Personaje = {
+    nombre: '',
+    poder: 0
   }
-
-  agregar( ){
-    console.log('Esta es una prueba!!');
-  }
+  
+  constructor(){}
 
 }
