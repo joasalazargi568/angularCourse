@@ -3,7 +3,7 @@
 /out-tsc
 /bazel-out
 /src/generated
-
+node_modules
 # Node
 /node_modules
 npm-debug.log
