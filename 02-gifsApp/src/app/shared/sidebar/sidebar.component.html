@@ -6,7 +6,7 @@
 
     <div class="list-group list-reset">
       <a class="list-group-item list-group-item-action" *ngFor="let hist of obtenerHistorial">
-        {{ hist }}
+        {{ hist | titlecase}}
       </a>
     </div>
 </div>
