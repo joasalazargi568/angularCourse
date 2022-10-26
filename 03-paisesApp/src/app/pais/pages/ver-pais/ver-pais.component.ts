@@ -4,7 +4,6 @@ import { switchMap, tap } from 'rxjs/operators';
 
 import { PaisService } from '../../services/pais.service';
 import { Country } from '../../interfaces/pais.interface';
-import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-ver-pais',
@@ -22,12 +21,10 @@ export class VerPaisComponent implements OnInit {
 
     this.activatedRouted.params
     .pipe(
-      switchMap( (param) => this.paisService.getPaisPorCodigo(param['id'])),
+      switchMap( ({ id }) => this.paisService.getPaisPorCodigo(id)),
       tap(console.log)
     )
-    .subscribe( pais => {
-      console.log(pais);
-    })
+    .subscribe( pais => this.pais = pais[0] );
     /*this.activatedRouted.params
     .subscribe(({id}) =>{
       this.paisService.getPaisPorCodigo(id)
