@@ -43,6 +43,14 @@
                 <li>fecha | date:'long' </li>
                 <li>fecha | date:'Año-Mes-Semana-Dia' </li>
             </ul>
+
+            <hr>
+                
+                <ul>
+                    <li>fecha | date GMT-6 </li>
+                    <li>fecha | date GMT-4</li>
+                    <li>fecha | date Deutsches</li>
+                </ul>
         </p-card>
     </div>
 
@@ -55,6 +63,14 @@
                 <li>{{ fecha | date:'long' }}</li>
                 <li>{{ fecha | date:'y-LLLL-ww-EEEE' }}</li>
             </ul>
+
+            <hr>
+                
+                <ul>
+                    <li>{{ fecha | date:'long':'GMT-6':'es-CO' }}</li>
+                    <li>{{ fecha | date:'long':'GMT-4' }}</li>
+                    <li>{{ fecha | date:'long':'':'de-LI' }}</li>
+                </ul>
         </p-card>
     </div>
 </div>
